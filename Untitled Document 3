@@ -1,0 +1,8 @@
+const { exec } = require('child_process');
+    if (session.message.text=="check disk space") {
+         exec('df -h', (err, stdout, stderr) => {
+         // the *entire* stdout and stderr (buffered)
+         console.log(`stdout: ${stdout}`);
+         console.log(`stderr: ${stderr}`);
+         });
+     }
